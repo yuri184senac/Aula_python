@@ -1,9 +1,9 @@
-caracteres_especial = ['@', '!']
-frase = '@la!2'
+caracteres_especial = ['@', '~', '!', '@', '#', '$', '%', '^', '&', '*', '_', '-', '+', '=', '`', '|', '\'', '(', ')', '{', '}', '[', ']', ':', ';', '"', "'", '<', '>', ',', '.', '?', '/']
+frase = 'yuriconder@_123*'
 count_especial = 0
 
-for i in caracteres_especial:
+for i in range(len(caracteres_especial)):
     if frase.count(caracteres_especial[i]):
-        count_especial =+1
-
+        count_especial = frase.count(caracteres_especial[i]) + count_especial;
+i=+1
 print(count_especial)
