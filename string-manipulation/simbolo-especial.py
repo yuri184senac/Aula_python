@@ -1,9 +1,10 @@
-caracteres_especial = ['@', '~', '!', '@', '#', '$', '%', '^', '&', '*', '_', '-', '+', '=', '`', '|', '\'', '(', ')', '{', '}', '[', ']', ':', ';', '"', "'", '<', '>', ',', '.', '?', '/']
-frase = 'yuriconder@_123*'
-count_especial = 0
+caracteres_especiais = ['@', '~', '!', '#', '$', '%', '^', '&', '*', '_', '-', '+', '=', '`', '|', '\'', '(', ')', '{', '}', '[', ']', ':', ';', '"', "'", '<', '>', ',', '.', '?', '/'];
 
-for i in range(len(caracteres_especial)):
-    if frase.count(caracteres_especial[i]):
-        count_especial = frase.count(caracteres_especial[i]) + count_especial;
-i=+1
-print(count_especial)
+frase = 'yuriconder*@';
+count_especiais = 0;
+
+for i in range(len(caracteres_especiais)):
+    if frase.count(caracteres_especiais[i]):
+        count_especiais = frase.count(caracteres_especiais[i]) + count_especiais;
+i=+1;
+print(count_especiais);
