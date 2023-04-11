@@ -12,5 +12,5 @@ if (a != 0):
     print('R1 = %.5f' %(r1));
     print('R2 = %.5f' %(r2));
 else:
-    print('"Impossível calcular"');
+    print('"Impossível calcular 123"');
     
