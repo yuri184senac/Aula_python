@@ -1,3 +1,4 @@
+#Yuri Conder Roliz Sabbagh
 #Entrada de dados
 x = float(input('Informe o valor de x: '));
 y = float(input('Informe o valor de y: '));
