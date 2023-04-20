@@ -9,10 +9,10 @@ while iniciaScript == True:
         if (os.path.exists(('E:'))):
             inicializador = True;
             tocarMusica = True;
-            print('O arquivo existe');
+            print('PEN DRIVER CONECTADO');
         else:
             if(tocarMusica):
                 os.system('start C:/Users/36129382023.1n\Documents/roleta-russa/sound1.mp3');
             tocarMusica = False;
-            print('Não existe!');
+            print('PEN DRIVER REMOVIDO');
             break;
