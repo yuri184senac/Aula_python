@@ -13,7 +13,8 @@ while (numAtual < num):
     numAtual = soma;
     print(soma)
 
-
+print('------------------CRÉDITOS AO DESENVOLVEDOR----------------')
+print('Programa realizado por Yuri Conder Roliz Sabbagh');
 
 
 
