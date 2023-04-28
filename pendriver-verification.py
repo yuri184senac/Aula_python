@@ -1,5 +1,4 @@
 import os
-
 iniciaScript = True;
 inicializador = True
 tocarMusica = False

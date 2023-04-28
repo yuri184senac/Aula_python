@@ -1,4 +1,15 @@
 #ENTRADA
-print('Insira o número 1 para verdadeiro ');
-print('Insira o número 0 para falso');
-p = input('Insira um valor ');
+#Primeiro vamos ter
+operadores = ['^', 'v', 's'];
+expressao = 'p^qss';
+
+operadores_salvos = [];
+contador = 0
+for i in (range(len(expressao))):
+    if expressao.count('q'):
+        contador = contador + 1;
+
+print(contador)
+
+
+
