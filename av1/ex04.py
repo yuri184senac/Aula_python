@@ -12,5 +12,5 @@ while (idade >= 0):
         somaIdades = idade + somaIdades;
         contador = contador + 1;
 #SAÍDA
-print(somaIdades/contador);
+print(f'A média aritimética das idade é {somaIdades/contador: .2f}');
 
