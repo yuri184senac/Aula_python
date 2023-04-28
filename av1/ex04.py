@@ -13,4 +13,5 @@ while (idade >= 0):
         contador = contador + 1;
 #SAÍDA
 print(f'A média aritimética das idade é {somaIdades/contador: .2f}');
-
+print('------------------CRÉDITOS AO DESENVOLVEDOR----------------')
+print('Programa realizado por Yuri Conder Roliz Sabbagh');

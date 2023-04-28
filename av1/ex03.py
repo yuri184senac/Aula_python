@@ -15,3 +15,5 @@ for i in range(1, numero):
     if(i % 2):
         print(i);
 
+print('------------------CRÉDITOS AO DESENVOLVEDOR----------------')
+print('Programa realizado por Yuri Conder Roliz Sabbagh');

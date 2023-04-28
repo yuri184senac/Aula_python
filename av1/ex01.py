@@ -1,5 +1,4 @@
 print('Bem vindo a calculadora de hipotenusa');
-print('Programa realizado por Yuri Conder Roliz Sabbagh');
 input('Pressione enter para continuar...');
 
 #ENTRADA
@@ -15,3 +14,5 @@ while (a < 0 or b < 0):
 hipotenusa = (a ** 2 + b ** 2) ** (1/2);
 #SAÍDA
 print(f'O valor da hipotenusa é igual a: {hipotenusa: .2f} cm');
+print('------------------CRÉDITOS AO DESENVOLVEDOR----------------')
+print('Programa realizado por Yuri Conder Roliz Sabbagh');
