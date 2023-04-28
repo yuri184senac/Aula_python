@@ -1,6 +1,6 @@
 print('Bem vindo a calculadora de hipotenusa');
 input('Pressione enter para continuar...');
-
+v = float(input('lado'))
 #ENTRADA
 print('Insira a medida em centímetros de dois lados de um triângulo retângulo:');
 a = float(input('Lado a: '));
