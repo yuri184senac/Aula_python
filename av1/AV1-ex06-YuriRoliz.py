@@ -7,7 +7,6 @@ print('2.Álcool');
 print('3.Diesel');
 print('4.Fim');
 #ENTRADA DE DADOS
-respostas = [];
 iniciaPrograma = True;
 dieselCount = 0;
 gasolinaCount = 0;
