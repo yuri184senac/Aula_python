@@ -2,6 +2,9 @@ tabela = [[1,2,3], [4,5,6], [7,8,9]]
 players = [['Jogador 1', 'X'], ['Jogador 2','O']]
 
 
+def condicaoDeganho():
+    if ()
+
 def playerInput():
     position = int(input('Insira o número correspondente à posição desejada:'));
     return position;    
