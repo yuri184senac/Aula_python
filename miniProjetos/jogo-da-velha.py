@@ -1,11 +1,23 @@
+import random
+
 tabela = [[1,2,3], [4,5,6], [7,8,9]]
 players = [['Jogador 1', 'X'], ['Jogador 2','O']]
+player = random.randint(0,1);#Sorteia quem começa o jogo;
 
 
-def condicaoDeganho():
-    if ()
-
+    
+def condicaoDeGanho():
+    #Coluna verifcando
+    soma = 0
+    for linha in range(len(tabela)):
+        for coluna in range(len(tabela)):
+            if (tabela[linha][coluna] == 'X'):
+               
+          
+           
+    
 def playerInput():
+    print(f'Vez do jogador {players[player][0]}')
     position = int(input('Insira o número correspondente à posição desejada:'));
     return position;    
 
@@ -14,7 +26,7 @@ def gerarTabuleiro():
     print(tabela[1])
     print(tabela[2])
     
-def inserirValor(posicao):
+def escolherPosicaoTabu(posicao):
     if (posicao == 1) :
         tabela[0][0] = players[player][1]
     elif (posicao == 2):
@@ -35,7 +47,9 @@ def inserirValor(posicao):
         tabela[2][2] = players[player][1]
 
 
-
-gerarTabuleiro()
-inserirValor(playerInput())
-gerarTabuleiro()
+while True:
+    player = 1 if (player==0) else 0 #Alterna o player na próxima jogada
+    gerarTabuleiro()
+    escolherPosicaoTabu(playerInput())
+    condicaoDeGanho()
+    

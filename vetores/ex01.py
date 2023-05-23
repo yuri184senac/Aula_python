@@ -1,3 +1,4 @@
+
 vetor = [23,30,55,3,5,0,1,4,2,100,99,37]
 i = 1;
 x = 0;
@@ -12,5 +13,6 @@ for i in range(len(vetor)):
     i = i + 1;
     x = x + 1;
 print(vetor)
+
 
 
