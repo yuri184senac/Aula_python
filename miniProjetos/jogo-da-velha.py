@@ -2,22 +2,19 @@ import random
 
 tabela = [[1,2,3], [4,5,6], [7,8,9]]
 players = [['Jogador 1', 'X'], ['Jogador 2','O']]
-player = random.randint(0,1);#Sorteia quem começa o jogo;
-
-
-    
-def condicaoDeGanho():
-    #Coluna verifcando
-    soma = 0
-    for linha in range(len(tabela)):
-        for coluna in range(len(tabela)):
-            if (tabela[linha][coluna] == 'X'):
+playerStart = random.randint(0,1);#Sorteia quem começa o jogo;
+jogador1 = 0
+jogador2 = 1
+# def condicaoDeGanho():
+#     #Coluna verifcando
+#     soma = 0
+#     for linha in range(len(tabela)):
+#         for coluna in range(len(tabela)):
+#             if (tabela[linha][coluna] == 'X'):
                
           
-           
-    
 def playerInput():
-    print(f'Vez do jogador {players[player][0]}')
+    print(f'Vez do jogador {players[playerStart][0]}')
     position = int(input('Insira o número correspondente à posição desejada:'));
     return position;    
 
@@ -26,30 +23,18 @@ def gerarTabuleiro():
     print(tabela[1])
     print(tabela[2])
     
-def escolherPosicaoTabu(posicao):
-    if (posicao == 1) :
-        tabela[0][0] = players[player][1]
-    elif (posicao == 2):
-        tabela[0][1] = players[player][1]
-    elif (posicao == 3):
-        tabela[0][2] = players[player][1]
-    elif (posicao == 4):
-        tabela[1][0] = players[player][1]
-    elif (posicao == 5):
-        tabela[1][1] = players[player][1]
-    elif (posicao == 6):
-        tabela[1][2] = players[player][1]
-    elif (posicao == 7):
-        tabela[2][0] = players[player][1]
-    elif(posicao == 8):
-        tabela[2][1] = players[player][1]
-    elif(posicao == 9):
-        tabela[2][2] = players[player][1]
-
-
+def escolherPosicaoTabuleiro(posicaoEscolhida):
+    tabela_pos = 1;
+    for linha in range(0,3):
+        for coluna in range (0,3):
+            if (tabela_pos == posicaoEscolhida):
+                tabela[linha][coluna] = players[playerStart][1]
+                return True
+            tabela_pos = tabela_pos + 1;
+        
 while True:
-    player = 1 if (player==0) else 0 #Alterna o player na próxima jogada
+    playerStart = jogador2 if (playerStart==jogador1) else jogador1 #Alterna o player na próxima jogada
     gerarTabuleiro()
-    escolherPosicaoTabu(playerInput())
-    condicaoDeGanho()
+    escolherPosicaoTabuleiro(playerInput());
+    #condicaoDeGanho()
     
