@@ -6,7 +6,6 @@ jogador1 = 0
 jogador2 = 1
 playerStart = random.randint(0,1);#Sorteia quem começa o jogo;
 
-
 def condicaoDeGanho():
     for linha in range(len(tabela)):
         somaLinha = 0
@@ -16,7 +15,14 @@ def condicaoDeGanho():
                 somaLinha = somaLinha + 1
             if (somaLinha == 3) :
                 print('X ganhou linha')
-        
+
+def condicaoDeGanhoRefactor():
+    pulaLinha = 0
+    for linha in range(len(tabela)):
+        for coluna in range (len(tabela)):
+            if (tabela[linha][coluna] != 1):
+               pulaLinha = pulaLinha + 1
+    print(pulaLinha);                    
 
 def playerInput():
     print(f'Vez do jogador {players[playerStart][0]}')
@@ -41,5 +47,5 @@ while True:
     playerStart = jogador2 if ( playerStart == jogador1 ) else jogador1 #Alterna o player na próxima jogada
     gerarTabuleiro()
     escolherPosicaoTabuleiro(playerInput());
-    condicaoDeGanho()
+    condicaoDeGanhoRefactor()
     
