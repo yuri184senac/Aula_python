@@ -1,28 +1,38 @@
 import random
-
 tabela = [[1,2,3], [4,5,6], [7,8,9]]
 players = [['Jogador 1', 'X'], ['Jogador 2','O']]
 jogador1 = 0 
 jogador2 = 1
 playerStart = random.randint(0,1);#Sorteia quem começa o jogo;
 
-def condicaoDeGanho():
-    for linha in range(len(tabela)):
-        somaLinha = 0
-        #Linha verifcando
-        for coluna in range(len(tabela)):
-            if (tabela[linha][coluna] == 'X'):
-                somaLinha = somaLinha + 1
-            if (somaLinha == 3) :
-                print('X ganhou linha')
 
-def condicaoDeGanhoRefactor():
-    pulaLinha = 0
-    for linha in range(len(tabela)):
-        for coluna in range (len(tabela)):
-            if (tabela[linha][coluna] != 1):
-               pulaLinha = pulaLinha + 1
-    print(pulaLinha);                    
+def condicaoDeGanho():
+    tamanhoTabela= len(tabela); # pega quantidade de [] dentro do array
+    count_vertical_player1 = 0
+    count_horizontal_player1 = 0
+    count_vertical_player2 = 0
+    count_horizontal_player2 = 0
+
+    for i in range(tamanhoTabela):
+        for j in range(tamanhoTabela):        
+            if (tabela[i][j] == 'X'):
+                count_horizontal_player1+=1
+            if (tabela[j][i]) == 'X':
+                count_vertical_player1+=1
+            if (tabela[i][j] == 'O'):
+                count_horizontal_player2+=1
+            if (tabela[j][i]) == 'O':
+                count_vertical_player2+=1
+            
+            if (j == 2):#cada loop do j
+                if ((count_horizontal_player1 == 3) or (count_vertical_player1 == 3)):
+                    print('X GANHOU')                
+                if ((count_vertical_player2 == 3) or (count_horizontal_player2 == 3)):
+                    print('Y GANHOU')                                    
+                count_horizontal_player1 = 0
+                count_vertical_player1 = 0  
+                count_horizontal_player2 = 0
+                count_vertical_player2 = 0            
 
 def playerInput():
     print(f'Vez do jogador {players[playerStart][0]}')
@@ -34,7 +44,7 @@ def gerarTabuleiro():
     print(tabela[1])
     print(tabela[2])
     
-def escolherPosicaoTabuleiro(posicaoEscolhida):
+def escolherPosicaoTabuleiro(posicaoEscolhida: int):
     tabela_pos = 1;
     for linha in range(0,3):
         for coluna in range (0,3):
@@ -47,5 +57,6 @@ while True:
     playerStart = jogador2 if ( playerStart == jogador1 ) else jogador1 #Alterna o player na próxima jogada
     gerarTabuleiro()
     escolherPosicaoTabuleiro(playerInput());
-    condicaoDeGanhoRefactor()
+    condicaoDeGanho()
+
     
