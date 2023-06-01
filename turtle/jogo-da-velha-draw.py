@@ -8,10 +8,27 @@ def screenConfig():
 
 def screenTableDraw():
   tracer(False)
-
-  forward(20)
+  #start position
   
-  backward(20)
+
+  # COLUNA 1
+ 
+  goto(45,0)  #total 90
+  goto(-45,0)
+  goto(-22.5,0)
+  goto(-22.5,100)
+  goto(-22.5,-100)
+  goto(-22.5,0)
+
+  #COLUNA 2
+  goto(22.5,0)
+  goto(22.5,100)
+  goto(22.5,-100)
+ 
+  
+  # # Completa a linha da esquerda
+  # goto(-300,0)
+  
   tracer(True)
   
 
