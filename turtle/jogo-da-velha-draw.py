@@ -62,9 +62,12 @@ def player_1_mark():
     # goto(-15,15)
     # goto(15,-15)
     penup()
-    position_x = 125
-    position_y = 125
-    goto(position_x,position_y)
+    position_start = 125
+    
+    aumento = (20*position_start)/100 + position_start
+    desconto = (20*position_start)/100 - position_start 
+      
+    goto(position_start, position_start)
     pendown()
     goto(100,150)
     goto(150,100)
@@ -76,6 +79,9 @@ def player_1_mark():
 def player_2_mark():
   #DESENHA UM Círculo
   circle(25)
+
+# def calc_porcentagem_aumento(num, percent):
+#   num - percent * num = num - percent/100 * num
 
 def main():
   #screenConfig()
