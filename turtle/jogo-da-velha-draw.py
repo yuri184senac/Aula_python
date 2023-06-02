@@ -45,47 +45,71 @@ def screenTableDraw():
   tracer(True)
   
 
-def get_mouse_click_coordenate(x,y):
+def get_mouse_click_coordenada(x,y):
     coordenada[0] = x
     coordenada[1] = y
-    tabela_mouse_click()
+    map_mark_mouse_click_coordenada()
     print(coordenada)
 
 
-def tabela_mouse_click():
+def map_mark_mouse_click_coordenada():
     if coordenada[0] > -150 and coordenada[0] < -52 and coordenada[1] > 48 and coordenada[1] < 94: 
+      
       print("CLICK NO QUADRADO 1:", coordenada)
     elif coordenada[0] > -49 and coordenada[0] < 48 and coordenada[1] > 48 and coordenada[1] < 94:
+     
       print('CLICK NO QUADRADO 2:', coordenada)
     elif coordenada[0] > 53 and coordenada[0] < 150 and coordenada[1] > 48 and coordenada[1] < 94:
+      
       print('CLICK NO QUADRADO 3:', coordenada)
     elif coordenada[0] > -150 and coordenada[0] < -52 and coordenada[1] > -3 and coordenada[1] < 44:
+      player_2_mark(-100, 0)
       print('CLICK NO QUADRADO 4:',coordenada)
     elif coordenada[0] > -49 and coordenada[0] < 48 and coordenada[1] > -3 and coordenada[1] < 44:
+      player_2_mark(2, 0)
+      
       print('CLICK NO QUADRADO 5:', coordenada)
     elif coordenada[0] > -53 and coordenada[0] < 150 and coordenada[1] > -3 and coordenada[1] < 44:
+      player_2_mark(107,0)
       print('CLICK NO QUADRADO 6:', coordenada)  
     elif coordenada[0] > -150 and coordenada[0] < -52 and coordenada[1] > -53 and coordenada[1] < -6:
+
       print('CLICK NO QUADRADO 7:', coordenada)  
     elif coordenada[0] > -49 and coordenada[0] < 48 and coordenada[1] > -53 and coordenada[1] < -6:
+
       print('CLICK NO QUADRADO 8:', coordenada)    
     elif coordenada[0] > -53 and coordenada[0] < 150 and coordenada[1] > -53 and coordenada[1] < -6:
+
       print('CLICK NO QUADRADO 9:', coordenada)  
-# def player_1_mark():
-#     #DESENHA UM X
-    
+
+ 
+  
+def player_1_mark(x,y):
+  penup()
+  goto(x,y)
+  pendown()
+  speed(1)
+  right(45)
+  forward(50)
+  backward(25)
+  left(85)
+  forward(25)
+  backward(50)
    
 
 def player_2_mark(x,y):
   #DESENHA UM Círculo
+  penup()
   goto(x,y)
-  circle(25)
+  pendown()
+  circle(20)
 
 
 
 def main():
   screenConfig()
-  onscreenclick(get_mouse_click_coordenate)
+  #onscreenclick(get_mouse_click_coordenada)
+  player_1_mark(0,0)
   done()
 
 if __name__ == "__main__":
