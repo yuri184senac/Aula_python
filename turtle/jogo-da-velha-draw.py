@@ -1,5 +1,5 @@
 from turtle import *
-
+coordenada = [0,0]
 def screenConfig():
   title('Jogo da Velha')
   setup (width=600, height=600, startx=None, starty=None)
@@ -46,46 +46,46 @@ def screenTableDraw():
   
 
 def get_mouse_click_coordenate(x,y):
-  print(x,y)
+    coordenada[0] = x
+    coordenada[1] = y
+    tabela_mouse_click()
+    print(coordenada)
 
-def tabela_mouse_click(x,y):
-  goto(x,y)
-  
 
-
-def player_1_mark():
-    #DESENHA UM X
-    # speed(1)
-    # goto(15,15)
-    # goto(-15,-15)
-    # goto(0,0)
-    # goto(-15,15)
-    # goto(15,-15)
-    penup()
-    position_start = 125
+def tabela_mouse_click():
+    if coordenada[0] > -150 and coordenada[0] < -52 and coordenada[1] > 48 and coordenada[1] < 94: 
+      print("CLICK NO QUADRADO 1:", coordenada)
+    elif coordenada[0] > -49 and coordenada[0] < 48 and coordenada[1] > 48 and coordenada[1] < 94:
+      print('CLICK NO QUADRADO 2:', coordenada)
+    elif coordenada[0] > 53 and coordenada[0] < 150 and coordenada[1] > 48 and coordenada[1] < 94:
+      print('CLICK NO QUADRADO 3:', coordenada)
+    elif coordenada[0] > -150 and coordenada[0] < -52 and coordenada[1] > -3 and coordenada[1] < 44:
+      print('CLICK NO QUADRADO 4:',coordenada)
+    elif coordenada[0] > -49 and coordenada[0] < 48 and coordenada[1] > -3 and coordenada[1] < 44:
+      print('CLICK NO QUADRADO 5:', coordenada)
+    elif coordenada[0] > -53 and coordenada[0] < 150 and coordenada[1] > -3 and coordenada[1] < 44:
+      print('CLICK NO QUADRADO 6:', coordenada)  
+    elif coordenada[0] > -150 and coordenada[0] < -52 and coordenada[1] > -53 and coordenada[1] < -6:
+      print('CLICK NO QUADRADO 7:', coordenada)  
+    elif coordenada[0] > -49 and coordenada[0] < 48 and coordenada[1] > -53 and coordenada[1] < -6:
+      print('CLICK NO QUADRADO 8:', coordenada)    
+    elif coordenada[0] > -53 and coordenada[0] < 150 and coordenada[1] > -53 and coordenada[1] < -6:
+      print('CLICK NO QUADRADO 9:', coordenada)  
+# def player_1_mark():
+#     #DESENHA UM X
     
-    aumento = (20*position_start)/100 + position_start
-    desconto = (20*position_start)/100 - position_start 
-      
-    goto(position_start, position_start)
-    pendown()
-    goto(100,150)
-    goto(150,100)
-    
-    goto(125,125)
-    goto(100,100)
-    goto(150,150)
+   
 
-def player_2_mark():
+def player_2_mark(x,y):
   #DESENHA UM Círculo
+  goto(x,y)
   circle(25)
 
-# def calc_porcentagem_aumento(num, percent):
-#   num - percent * num = num - percent/100 * num
+
 
 def main():
-  #screenConfig()
-  player_1_mark()
+  screenConfig()
+  onscreenclick(get_mouse_click_coordenate)
   done()
 
 if __name__ == "__main__":
