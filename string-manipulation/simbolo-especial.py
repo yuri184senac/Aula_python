@@ -1,6 +1,6 @@
 caracteres_especiais = ['@', '~', '!', '#', '$', '%', '^', '&', '*', '_', '-', '+', '=', '`', '|', '\'', '(', ')', '{', '}', '[', ']', ':', ';', '"', "'", '<', '>', ',', '.', '?', '/'];
 
-frase = 'yuriconder*@@';
+frase = 'yuriconder*@';
 count_especiais = 0;
 
 for i in range(len(caracteres_especiais)):
