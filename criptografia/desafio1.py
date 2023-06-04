@@ -1,3 +1,4 @@
+#Aluno: Yuri Conder Roliz Sabbagh
 lista = {
     "z" : "p", 
     "e" : "o" ,
