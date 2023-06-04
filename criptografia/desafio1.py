@@ -41,6 +41,7 @@ def parseToZeus(frase):
         return fraseSanitizada.capitalize()
 
 #ENTRADA DE DADOS
+print('Desafio 1 – criar uma criptografia simétrica')
 print('--------MENU------')
 print('1. CRIPTOGRAFAR')
 print('2. DESCRIPTOGRADAR')
