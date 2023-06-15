@@ -4,14 +4,18 @@ players = [['Jogador 1', 'X'], ['Jogador 2','O']]
 jogador1 = 0 
 jogador2 = 1
 playerStart = random.randint(0,1);#Sorteia quem começa o jogo;
+rodadas = 0
+
 
 
 def condicaoDeGanho():
+    flag = True
     tamanhoTabela= len(tabela); # pega quantidade de [] dentro do array
     count_vertical_player1 = 0
     count_horizontal_player1 = 0
     count_vertical_player2 = 0
     count_horizontal_player2 = 0
+
 
     for i in range(tamanhoTabela):
         for j in range(tamanhoTabela):        
@@ -24,16 +28,35 @@ def condicaoDeGanho():
             if (tabela[j][i]) == 'O':
                 count_vertical_player2+=1
             
+           
+           
             if (j == 2):#cada loop do j
                 if ((count_horizontal_player1 == 3) or (count_vertical_player1 == 3)):
-                    print('X GANHOU')                
+                    print('X GANHOU')   
+                    gerarTabuleiro()
+                    flag = False      
                 if ((count_vertical_player2 == 3) or (count_horizontal_player2 == 3)):
-                    print('Y GANHOU')                                    
+                    print('Y GANHOU') 
+                    gerarTabuleiro()   
+                    flag = False
+
+                if (tabela[0][0] == 'X' and tabela[1][1] == 'X' and tabela[2][2] == 'X' or tabela[2][0] == 'X' and tabela[1][1] == 'X' and tabela[0][2] == 'X' ):
+                    print('X GANHOU')
+                    print('')   
+                    gerarTabuleiro()
+                    flag = False    
+
+                if (tabela[0][0] == 'O' and tabela[1][1] == 'O' and tabela[2][2] == 'O' or tabela[2][0] == 'O' and tabela[1][1] == 'O' and tabela[0][2] == 'O' ):
+                    print('O GANHOU')  
+                    print('')   
+                    gerarTabuleiro()
+                    flag = False    
+                
                 count_horizontal_player1 = 0
                 count_vertical_player1 = 0  
                 count_horizontal_player2 = 0
                 count_vertical_player2 = 0            
-
+    return flag
 def playerInput():
     print(f'Vez do jogador {players[playerStart][0]}')
     position = int(input('Insira o número correspondente à posição desejada:'));
@@ -52,11 +75,14 @@ def escolherPosicaoTabuleiro(posicaoEscolhida: int):
                 tabela[linha][coluna] = players[playerStart][1]
                 return True
             tabela_pos = tabela_pos + 1;
-        
-while True:
+    
+while condicaoDeGanho()==True and rodadas <= 9:
+    rodadas +=1
     playerStart = jogador2 if ( playerStart == jogador1 ) else jogador1 #Alterna o player na próxima jogada
     gerarTabuleiro()
     escolherPosicaoTabuleiro(playerInput());
-    condicaoDeGanho()
+    
+   
+    
 
     
