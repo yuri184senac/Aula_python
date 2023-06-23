@@ -1,5 +1,8 @@
-#Grupo:
-
+#GRUPO
+#Guilherme
+#João Gabriel
+#Thiago Luiz
+#Yuri Roliz
 print('MERCADO');
 
 produto_valor= float(input('Infome o valor do produto R$:'))

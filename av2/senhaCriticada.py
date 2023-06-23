@@ -1,3 +1,8 @@
+#GRUPO
+#Guilherme
+#João Gabriel
+#Thiago Luiz
+#Yuri Roliz
 
 print('Validador de senha')
 senha = input('Informe a senha: ');

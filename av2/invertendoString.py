@@ -1,6 +1,10 @@
-#word = input('Digite uma frase:');
+#GRUPO
+#Guilherme
+#João Gabriel
+#Thiago Luiz
+#Yuri Roliz
 
-word = 'ola mundo'
+word = input('Digite uma frase:');
 
 def inverteString(word):
    novaPalavra = word[::-1]
