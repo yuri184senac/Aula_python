@@ -17,5 +17,5 @@ while True:
 for i in range(potencia):
         resultado = n1*resultado
         
-print(resultado)
+print(f'{n1} elevado à {potencia} é igual a {resultado}')
 

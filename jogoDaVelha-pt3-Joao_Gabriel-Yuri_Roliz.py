@@ -1,10 +1,11 @@
+#Alunos Yuri Roliz e Joao Gabriel
 import random
 tabela = [[1,2,3], [4,5,6], [7,8,9]]
 players = [['Jogador 1', 'X'], ['Jogador 2','O']]
 jogador1 = 0 
 jogador2 = 1
 playerStart = random.randint(0,1);#Sorteia quem começa o jogo;
-rodadas = 0
+
 tamanhoTabela= len(tabela); # pega quantidade de [] dentro do array
 
 
