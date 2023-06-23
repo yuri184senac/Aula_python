@@ -36,8 +36,8 @@ def verNumero(senha):
 
 def validarSenha(senha):
     if (verTamanho(senha) and verLetraMaiu(senha) and verSeComecaNumero(senha) and verNumero(senha)):
-        print('A sua senha é válida')
+        print('senha é válida')
     else:
-        print('A seu senha é inválida')
+        print('senha é inválida')
 
 validarSenha(senha)
