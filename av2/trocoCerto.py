@@ -8,7 +8,7 @@ print('MERCADO');
 produto_valor= float(input('Infome o valor do produto R$:'))
 valor_pago = float(input('Informe o valor pago em dinheiro R$:'))
 troco = valor_pago - produto_valor
-meuTroco = 'No troco você vai precisar de \n  ' 
+meuTroco = 'No troco você vai precisar de :\n' 
 
 #processo
 def separaCedulas(valor):
