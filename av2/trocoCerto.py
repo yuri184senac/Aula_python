@@ -28,19 +28,19 @@ def separaCedulas(valor):
 
 
   if (n20 != 0):
-    meuTroco += f' {n20:.0f} x notas de 20 \n '
+    meuTroco += f' {n20:.0f} x notas de R$20 \n '
 
   if (n10 != 0):
-    meuTroco += f' {n10:.0f} x notas de 10 \n '
+    meuTroco += f' {n10:.0f} x notas de R$10 \n '
 
   if (n5 != 0):
-    meuTroco += f' {n5:.0f} x notas de 5 \n '
+    meuTroco += f' {n5:.0f} x notas de R$5 \n '
   
   if (n2 != 0):
-    meuTroco += f' {n2:.0f} x notas de 2 \n '
+    meuTroco += f' {n2:.0f} x notas de R$2 \n '
   
   if (n1 != 0):
-    meuTroco += f' {n1:.0f} x notas de 1 \n '
+    meuTroco += f' {n1:.0f} x notas de R$1 \n '
     
 
 separaCedulas(troco)
